@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:35:39 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/23 01:46:50 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/02/23 13:45:25 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,15 @@ class AForm
 		AForm(const std::string name, bool isSigned, const int requiredGradeToSign, const int requiredGradeToExec);
 		AForm(const AForm& other);
 		AForm& operator=(const AForm& other);
-		~AForm();
-		const std::string	getName();
-		bool				getisSigned();
+		virtual ~AForm();
+		const std::string	getName() const;
+		bool				getisSigned() const;
 		int					getRequiredGradeToSign();
-		int					getRequiredGradeToExec();
+		int					getRequiredGradeToExec() const;
 		void				setIsSigned();
 		void				beSigned(Bureaucrat& bureaucrat);
 		virtual 			void execute(Bureaucrat const & executor) const = 0;
+		int					isValidForExecution(const Bureaucrat& executor) const;
 		class GradeTooHighException: public std::exception
 		{
 			virtual const char* what() const throw();
@@ -45,7 +46,10 @@ class AForm
 		{
 			virtual const char* what() const throw();
 		};
-		 
+		class validationExecException: public std::exception
+		{
+			virtual const char* what() const throw();
+		};
 };
 std::ostream& operator<<(std::ostream& COUT, AForm& form);
 

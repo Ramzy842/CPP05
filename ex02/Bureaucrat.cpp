@@ -6,11 +6,12 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 15:53:27 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/22 20:37:05 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/02/23 13:59:21 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Bureaucrat.hpp"
+
 
 Bureaucrat::Bureaucrat() : name("Default"), grade(1)
 {
@@ -43,12 +44,12 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Bureaucrat destructor called." << std::endl;
 }
 
-const std::string Bureaucrat::getName()
+const std::string Bureaucrat::getName() const
 {
 	return this->name;
 }
 
-int	Bureaucrat::getGrade()
+int	Bureaucrat::getGrade() const
 {
 	return this->grade;
 }
@@ -96,4 +97,16 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return "Grade too Low!";
+}
+
+void Bureaucrat::executeForm(AForm const & form)
+{
+	try {
+		form.execute(*this);
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
+	}
+	catch (std::exception& e)
+	{
+		std::cout << "Couldn't execute form because " << e.what() << std::endl;
+	}
 }
