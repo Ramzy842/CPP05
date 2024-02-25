@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:35:20 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/23 14:22:12 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/02/25 01:52:01 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	if (!this->isValidForExecution(executor))
 		throw validationExecException();
 	std::cout << "drilling noises." << std::endl;
-	std::cout << this->target << " has been robotomized successfully 50% of the time. Otherwise, informs that the robotomy failed." << std::endl;
-	
+	std::cout << this->target << " has been robotomized successfully 50% of the time." << std::endl;
 }

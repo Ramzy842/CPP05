@@ -6,7 +6,7 @@
 #    By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 15:57:07 by rchahban          #+#    #+#              #
-#    Updated: 2024/02/23 10:29:22 by rchahban         ###   ########.fr        #
+#    Updated: 2024/02/25 01:39:59 by rchahban         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,6 @@ CPP = c++
 
 # Compiler flags
 CPPFLAGS = -Werror -Wall -Wextra -std=c++98
-
-# Includes (.hpp)
-INCLUDES = -I./includes
 
 # Source files
 SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
@@ -33,11 +30,11 @@ all: $(NAME)
 
 # Rule to generate the main executable from the object files
 $(NAME): $(OBJ)
-	$(CPP) $(CPPFLAGS) $(INCLUDES) $(OBJ) -o $(NAME)
+	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 # Rule to generate the object files from the source files
 %.o: %.cpp
-	$(CPP) $(CPPFLAGS) $(INCLUDES) -c $< -o $@
+	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 # Clean target to remove generated files
 clean:

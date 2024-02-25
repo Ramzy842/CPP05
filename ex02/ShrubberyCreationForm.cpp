@@ -6,19 +6,42 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:35:24 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/23 13:53:03 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/02/25 01:38:48 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ShrubberyCreationForm.hpp"
 #include "./AForm.hpp"
 
+void drawTree(std::ofstream& outputFile)
+{
+	outputFile << "         *" << std::endl;
+	outputFile << "        /|\\ " << std::endl;
+	outputFile << "       /*|O\\ " << std::endl;
+	outputFile << "      /*/|\\*\\ " << std::endl;
+	outputFile << "     /X/O|*\\X\\ " << std::endl;
+	outputFile << "    /*/X/|\\X\\*\\ " << std::endl;
+	outputFile << "   /O/*/X|*\\O\\X\\ " << std::endl;
+	outputFile << "  /*/O/X/|\\X\\O\\*\\ " << std::endl;
+	outputFile << " /X/O/*/X|O\\X\\*\\O\\ " << std::endl;
+	outputFile << "/O/X/*/O/|\\X\\*\\O\\X\\ " << std::endl;
+	outputFile << "        |X|" << std::endl;
+	outputFile << "        |X|" << std::endl;
+}
+
+
 ShrubberyCreationForm::ShrubberyCreationForm(): AForm("Shrubbery Creation Form", false, 145, 137), target("Somewhere")
 {
+	std::ofstream outputFile(target);
+	drawTree(outputFile);
+    outputFile.close();
 	std::cout << "Shrubbery Creation Form constructor called." << std::endl;
 }
 ShrubberyCreationForm::ShrubberyCreationForm(const char *target) : AForm("Shrubbery Creation Form", false, 145, 137), target(target)
 {
+	std::ofstream outputFile(target);
+	drawTree(outputFile);
+    outputFile.close();
 	std::cout << "Shrubbery Creation Form parametrized constructor called." << std::endl;
 }
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& form)

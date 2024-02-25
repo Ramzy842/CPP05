@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 20:39:24 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/23 14:25:22 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/02/25 01:54:52 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 int main ()
 {
 	try {
-		Bureaucrat b1 = Bureaucrat("Robert", 2);
+		Bureaucrat b1 = Bureaucrat("Robert", 71);
 		std::cout << b1;
 		b1.increment();
-		AForm *f1 = new PresidentialPardonForm("Some form");
+		AForm *f1 = new RobotomyRequestForm("Home");
 		std::cout << *f1;
 		f1->beSigned(b1);
 		b1.executeForm(*f1);
