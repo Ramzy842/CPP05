@@ -6,27 +6,23 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 20:39:24 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/26 00:18:43 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/02/26 01:03:31 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Bureaucrat.hpp"
-#include "./AForm.hpp"
-#include "./ShrubberyCreationForm.hpp"
-#include "./RobotomyRequestForm.hpp"
-#include "./PresidentialPardonForm.hpp"
+// #include "./Bureaucrat.hpp"
+// #include "./AForm.hpp"
+// #include "./ShrubberyCreationForm.hpp"
+// #include "./RobotomyRequestForm.hpp"
+// #include "./PresidentialPardonForm.hpp"
+#include "./Intern.hpp"
 
 int main ()
 {
 	try {
-		Bureaucrat b1 = Bureaucrat("Robert", 88);
-		std::cout << b1;
-		b1.increment();
-		AForm *f1 = new RobotomyRequestForm("Home");
-		std::cout << *f1;
-		f1->beSigned(b1);
-		b1.executeForm(*f1);
-		delete f1;
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 	}
 	catch (std::exception& e)
 	{

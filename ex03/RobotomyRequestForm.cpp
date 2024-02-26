@@ -6,12 +6,13 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:35:20 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/26 00:12:25 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/02/26 00:37:56 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./RobotomyRequestForm.hpp"
 #include "./AForm.hpp"
+#include <cstdlib>
 
 RobotomyRequestForm::RobotomyRequestForm(): AForm("Robotomy Request Form", false, 72, 45), target("Somewhere")
 {
