@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:35:39 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/23 13:45:25 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 23:08:57 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class AForm
 		const int			requiredGradeToExec;
 	public:
 		AForm();
-		AForm(const std::string name, bool isSigned, const int requiredGradeToSign, const int requiredGradeToExec);
+		AForm(const std::string name, const int requiredGradeToSign, const int requiredGradeToExec);
 		AForm(const AForm& other);
 		AForm& operator=(const AForm& other);
 		virtual ~AForm();

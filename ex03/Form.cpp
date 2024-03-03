@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 19:51:03 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/21 23:12:11 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 23:09:26 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ Form::Form(): name("Default"), isSigned(false), requiredGradeToSign(1), required
 	std::cout << "Form constructor called." << std::endl;
 }
 
-Form::Form(const std::string _name, bool _isSigned, const int _requiredGradeToSign, const int _requiredGradeToExec)
-	: name(_name) , isSigned(_isSigned), requiredGradeToSign(_requiredGradeToSign), requiredGradeToExec(_requiredGradeToExec){
+Form::Form(const std::string _name, const int _requiredGradeToSign, const int _requiredGradeToExec)
+	: name(_name) , isSigned(false), requiredGradeToSign(_requiredGradeToSign), requiredGradeToExec(_requiredGradeToExec){
 	std::cout << "Form parametrized constructor called." << std::endl;
 }
 

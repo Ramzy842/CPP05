@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 20:39:24 by rchahban          #+#    #+#             */
-/*   Updated: 2024/03/03 01:41:17 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 23:35:27 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@ int main ()
 {
 	try {
 		Intern someRandomIntern;
+		Bureaucrat b1;
 		Form* rrf;
-		rrf = someRandomIntern.makeForm("presidential pardoN", "Bender");
+		rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+		rrf->beSigned(b1);
+		rrf->execute(b1);
 	}
 	catch (std::exception& e)
 	{

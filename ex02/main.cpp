@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 20:39:24 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/26 00:18:43 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 23:22:11 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int main ()
 {
 	try {
-		Bureaucrat b1 = Bureaucrat("Robert", 88);
+		Bureaucrat b1 = Bureaucrat("Robert", 30);
 		std::cout << b1;
 		b1.increment();
 		AForm *f1 = new RobotomyRequestForm("Home");

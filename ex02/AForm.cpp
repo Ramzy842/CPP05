@@ -13,17 +13,12 @@
 #include "./AForm.hpp"
 #include "./Bureaucrat.hpp"
 
-/*
-	You have to check that the AForm is signed and that the grade of the bureaucrat
-	attempting to execute the AForm is high enough. Otherwise, throw an appropriate exception.
-*/
-
 AForm::AForm(): name("Default"), isSigned(false), requiredGradeToSign(1), requiredGradeToExec(1) {
 	std::cout << "AForm constructor called." << std::endl;
 }
 
-AForm::AForm(const std::string _name, bool _isSigned, const int _requiredGradeToSign, const int _requiredGradeToExec)
-	: name(_name) , isSigned(_isSigned), requiredGradeToSign(_requiredGradeToSign), requiredGradeToExec(_requiredGradeToExec){
+AForm::AForm(const std::string _name, const int _requiredGradeToSign, const int _requiredGradeToExec)
+	: name(_name) , isSigned(false), requiredGradeToSign(_requiredGradeToSign), requiredGradeToExec(_requiredGradeToExec){
 	std::cout << "AForm parametrized constructor called." << std::endl;
 }
 

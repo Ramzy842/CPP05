@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 19:51:01 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/21 23:20:23 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 23:01:48 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Form
 		const int			requiredGradeToExec;
 	public:
 		Form();
-		Form(const std::string name, bool isSigned, const int requiredGradeToSign, const int requiredGradeToExec);
+		Form(const std::string name, const int requiredGradeToSign, const int requiredGradeToExec);
 		Form(const Form& other);
 		Form& operator=(const Form& other);
 		~Form();

@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:35:24 by rchahban          #+#    #+#             */
-/*   Updated: 2024/03/03 01:09:32 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 23:23:51 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ void drawTree(std::ofstream& outputFile)
 }
 
 
-ShrubberyCreationForm::ShrubberyCreationForm(): AForm("Shrubbery Creation Form", false, 145, 137), target("Somewhere")
+ShrubberyCreationForm::ShrubberyCreationForm(): AForm("Shrubbery Creation Form",  145, 137), target("Somewhere")
 {
 	
 	std::cout << "Shrubbery Creation Form constructor called." << std::endl;
 }
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string	target) : AForm("Shrubbery Creation Form", false, 145, 137), target(target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string	target) : AForm("Shrubbery Creation Form",  145, 137), target(target)
 {
 	std::cout << "Shrubbery Creation Form parametrized constructor called." << std::endl;
 }
