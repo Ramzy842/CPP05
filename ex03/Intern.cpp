@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 00:21:35 by rchahban          #+#    #+#             */
-/*   Updated: 2024/03/03 01:32:38 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 01:40:58 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ AForm *Intern::makeForm(std::string formName, std::string target) const
 		if (to_lower(formName) == to_lower(names[x]))
 		{
 			form = forms[x](target);
+			formFound = true;
 			std::cout << "Intern creates " << form->getName() << std::endl;
 		}
 	}
