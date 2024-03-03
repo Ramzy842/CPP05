@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:35:14 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/23 14:20:16 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 01:09:48 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ PresidentialPardonForm::PresidentialPardonForm(): AForm("Presidential Pardon For
 {
 	std::cout << "Presidential Pardon Form constructor called." << std::endl;
 }
-PresidentialPardonForm::PresidentialPardonForm(const char *target) : AForm("Presidential Pardon Form", false, 25, 5), target(target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string	target) : AForm("Presidential Pardon Form", false, 25, 5), target(target)
 {
 	std::cout << "Presidential Pardon Form parametrized constructor called." << std::endl;
 }
@@ -32,8 +32,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 }
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& form)
 {
-	if (this != &form)
-		this->target = form.target;
+	(void)form;
 	std::cout << "Presidential Pardon Form copy assignment operator called." << std::endl;
 	return (*this);
 }

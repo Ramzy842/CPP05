@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:35:24 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/25 22:31:31 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 01:09:32 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(): AForm("Shrubbery Creation Form",
 	
 	std::cout << "Shrubbery Creation Form constructor called." << std::endl;
 }
-ShrubberyCreationForm::ShrubberyCreationForm(const char *target) : AForm("Shrubbery Creation Form", false, 145, 137), target(target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string	target) : AForm("Shrubbery Creation Form", false, 145, 137), target(target)
 {
 	std::cout << "Shrubbery Creation Form parametrized constructor called." << std::endl;
 }
@@ -50,8 +50,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 }
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& form)
 {
-	if (this != &form)
-		this->target = form.target;
+	(void)form;
 	std::cout << "Shrubbery Creation Form copy assignment operator called." << std::endl;
 	return (*this);
 }

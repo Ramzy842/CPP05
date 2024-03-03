@@ -6,18 +6,19 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:35:20 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/26 00:12:25 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 01:09:39 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./RobotomyRequestForm.hpp"
 #include "./AForm.hpp"
+#include <cstdlib>
 
 RobotomyRequestForm::RobotomyRequestForm(): AForm("Robotomy Request Form", false, 72, 45), target("Somewhere")
 {
 	std::cout << "Robotomy Request Form constructor called." << std::endl;
 }
-RobotomyRequestForm::RobotomyRequestForm(const char *target) : AForm("Robotomy Request Form", false, 72, 45), target(target)
+RobotomyRequestForm::RobotomyRequestForm(const std::string	target) : AForm("Robotomy Request Form", false, 72, 45), target(target)
 {
 	std::cout << "Robotomy Request Form parametrized constructor called." << std::endl;
 }
@@ -32,8 +33,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 }
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& form)
 {
-	if (this != &form)
-		this->target = form.target;
+	(void)form;
 	std::cout << "Robotomy Request Form copy assignment operator called." << std::endl;
 	return (*this);
 }

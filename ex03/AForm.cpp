@@ -19,27 +19,27 @@
 */
 
 AForm::AForm(): name("Default"), isSigned(false), requiredGradeToSign(1), requiredGradeToExec(1) {
-	std::cout << "AForm constructor called." << std::endl;
+	// std::cout << "AForm constructor called." << std::endl;
 }
 
 AForm::AForm(const std::string _name, bool _isSigned, const int _requiredGradeToSign, const int _requiredGradeToExec)
 	: name(_name) , isSigned(_isSigned), requiredGradeToSign(_requiredGradeToSign), requiredGradeToExec(_requiredGradeToExec){
-	std::cout << "AForm parametrized constructor called." << std::endl;
+	// std::cout << "AForm parametrized constructor called." << std::endl;
 }
 
 AForm::AForm(const AForm& other) : name(other.name) , isSigned(other.isSigned), requiredGradeToSign(other.requiredGradeToSign), requiredGradeToExec(other.requiredGradeToExec) {
-	std::cout << "AForm copy constructor called." << std::endl;
+	// std::cout << "AForm copy constructor called." << std::endl;
 }
 
 AForm& AForm::operator=(const AForm& other){
 	if (this != &other)
 		this->isSigned = other.isSigned;
-	std::cout << "AForm copy assignment operator called." << std::endl;
+	// std::cout << "AForm copy assignment operator called." << std::endl;
 	return *this;
 }
 
 AForm::~AForm(){
-	std::cout << "AForm destructor called." << std::endl;
+	// std::cout << "AForm destructor called." << std::endl;
 }
 
 const std::string AForm::getName() const

@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 20:39:24 by rchahban          #+#    #+#             */
-/*   Updated: 2024/02/26 01:03:31 by rchahban         ###   ########.fr       */
+/*   Updated: 2024/03/03 01:26:40 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main ()
 	try {
 		Intern someRandomIntern;
 		Form* rrf;
-		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		rrf = someRandomIntern.makeForm("f", "Bender");
 	}
 	catch (std::exception& e)
 	{
